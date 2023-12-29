@@ -13,6 +13,10 @@ func Slices(table string) [][]string {
 	var slices [][]string
 
 	for _, row := range rows {
+		if len(row) == 0 {
+			continue
+		}
+
 		slices = append(slices, strings.Fields(row))
 	}
 
